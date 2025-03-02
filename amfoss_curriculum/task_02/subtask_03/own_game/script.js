@@ -212,7 +212,7 @@ function gameOver() {
             alert("Game Over! Score:"+ score);
             break;
     }
-    startGame();
+    resetScore();
     highScoreUpdate();
 }
 
@@ -244,6 +244,12 @@ function displayScore(){
     scoreButton1.innerText = (round-1)%10;
     scoreButton2.innerText = (Math.floor((round-1)/10))%10;
     scoreButton3.innerText = (Math.floor((round-1)/100))%10;
+}
+
+function resetScore(){
+    scoreButton1.innerText = 0;
+    scoreButton2.innerText =0;
+    scoreButton3.innerText=0;
 }
 
 //you can change the level in the middle of the game lol
